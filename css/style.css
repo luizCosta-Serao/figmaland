@@ -1,2 +1,5 @@
 /* Style Global */
 @import url('./global.css');
+
+/* Style Header */
+@import url('./header.css');
