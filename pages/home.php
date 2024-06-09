@@ -38,3 +38,20 @@
     <img title="Macbook Pro" src="<?php echo INCLUDE_PATH; ?>/assets/macbook-pro.png" alt="Macbook Pro">
   </div>
 </section>
+
+<section class="prototyping">
+  <div class="prototyping-img">
+    <img src="<?php echo INCLUDE_PATH; ?>/assets/screen-content.png" alt="">
+  </div>
+
+  <div class="prototyping-content">
+    <span>At your fingertips</span>
+    <h2>Lightning fast prototyping</h2>
+    <span>Subscribe to our Newsletter</span>
+    <p>Available exclusivery on Figmaland</p>
+    <form action="">
+      <input type="email" placeholder="Your email" name="email">
+      <input type="submit" value="Subscribe" name="acao">
+    </form>
+  </div>
+</section>

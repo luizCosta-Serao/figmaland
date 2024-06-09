@@ -1,0 +1,86 @@
+.prototyping {
+  display: flex;
+  padding: 0 2rem;
+  align-items: center;
+  gap: 50px;
+}
+
+.prototyping-content span {
+  color: #252B42;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: .1px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.prototyping-content h2 {
+  color: #252B42;
+  font-size: 48px;
+  line-height: 55px;
+  letter-spacing: .2px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.prototyping-content p {
+  color: #374754;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: .2px;
+  margin-bottom: 36px;
+}
+
+.prototyping-content form {
+  display: flex;
+  gap: 12px;
+}
+
+.prototyping-content form input[type="email"] {
+  max-width: 273px;
+  width: 100%;
+  border-radius: 39px;
+  padding: 19px 39px;
+  background-color: #F4F4F4;
+  border: 1px solid #E8E8E8;
+  color: #18171D;
+  font-size: 14px;
+  letter-spacing: .1px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.prototyping-content form input[type="email"]::placeholder {
+  color: #18171D;
+  font-size: 14px;
+  letter-spacing: .1px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.prototyping-content form input[type="submit"] {
+  max-width: 172px;
+  width: 100%;
+  border-radius: 35px;
+  background-color: #2091F9;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .prototyping {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 500px) {
+  .prototyping-content h2 {
+    font-size: 40px;
+  }
+}
