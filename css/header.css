@@ -68,4 +68,8 @@
   .header .menu ul {
     flex-direction: column;
   }
+
+  .header .menu .logo {
+    margin: 0 auto;
+  }
 }
