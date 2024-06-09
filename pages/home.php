@@ -55,3 +55,11 @@
     </form>
   </div>
 </section>
+
+<section class="partners">
+  <h2>Partners</h2>
+  <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
+  <div class="partners-img">
+    <img title="Partners" src="<?php echo INCLUDE_PATH; ?>/assets/partners_imgs.png" alt="Partners">
+  </div>
+</section>
