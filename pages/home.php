@@ -26,3 +26,15 @@
     </li>
   </ul>
 </section>
+
+<section class="fastest-organize">
+  <div class="fastest-organize-content">
+    <h2>Fastest way to organize</h2>
+    <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
+    <a href="">Try For Free</a>
+  </div>
+  
+  <div class="fastest-organize-img">
+    <img title="Macbook Pro" src="<?php echo INCLUDE_PATH; ?>/assets/macbook-pro.png" alt="Macbook Pro">
+  </div>
+</section>
