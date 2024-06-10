@@ -77,3 +77,63 @@
   </div>
   <button class="more-testimonials">More Testimonials</button>
 </section>
+
+<section class="pricing">
+  <h2>Pricing</h2>
+  <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
+  <ul class="pricing-list">
+    <li>
+      <span>Free</span>
+      <p>Organize across all apps by hand</p>
+      <div class="pricing-per-month">
+        <span>0</span>
+        <div>
+          <span>$</span>
+          <p>Per Month</p>
+        </div>
+      </div>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <a class="order-now" href="">Order Now</a>
+    </li>
+
+    <li>
+      <span>Standard</span>
+      <p>Organize across all apps by hand</p>
+      <div class="pricing-per-month">
+        <span>10</span>
+        <div>
+          <span>$</span>
+          <p>Per Month</p>
+        </div>
+      </div>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <a class="order-now" href="">Order Now</a>
+    </li>
+
+    <li>
+      <span>Business</span>
+      <p>Organize across all apps by hand</p>
+      <div class="pricing-per-month">
+        <span>99</span>
+        <div>
+          <span>$</span>
+          <p>Per Month</p>
+        </div>
+      </div>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <p class="pricing-feature">Pricing Feature</p>
+      <a class="order-now" href="">Order Now</a>
+    </li>
+  </ul>
+</section>
