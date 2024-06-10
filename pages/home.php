@@ -63,3 +63,17 @@
     <img title="Partners" src="<?php echo INCLUDE_PATH; ?>/assets/partners_imgs.png" alt="Partners">
   </div>
 </section>
+
+<section class="testimonials">
+  <h2>Testimonials</h2>
+  <img class="ibm" src="<?php echo INCLUDE_PATH; ?>/assets/logos_ibm.png" alt="">
+  <p>Most calendars are designed for teams. Slate is designed for freelancers who want a sinple way to plan their schedule.</p>
+  <div class="testimonial-single">
+    <img class="testimonial-img" title="Testimonial" src="<?php echo INCLUDE_PATH; ?>/assets/testimonial.png" alt="Testimonial">
+    <div class="testimonial-content">
+      <p>Organize across</p>
+      <p>Ui designer</p>
+    </div>
+  </div>
+  <button class="more-testimonials">More Testimonials</button>
+</section>
