@@ -1,0 +1,159 @@
+.pricing {
+  background-color: #252B42;
+  padding: 110px 16px;
+}
+
+.pricing > h2 {
+  text-align: center;
+  font-size: 48px;
+  line-height: 55px;
+  letter-spacing: .2px;
+  color: #fff;
+  margin-bottom: 17px;
+  font-weight: 400;
+}
+
+.pricing > p {
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: .2px;
+  max-width: 582px;
+  width: 100%;
+  margin: 0 auto 90px auto;
+}
+
+.pricing-list {
+  display: flex;
+  max-width: 1105px;
+  margin: 0 auto;
+  gap: 50px;
+  align-items: center;
+}
+
+.pricing-list li {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.pricing-list li > span {
+  color: #252B42;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.pricing-list li > p {
+  color: #374754;
+  max-width: 148px;
+  width: 100%;
+  margin: 0 auto 30px auto;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: .1px;
+}
+
+.pricing-list li > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+} 
+
+.pricing-list li div > span {
+  color: #252B42;
+  font-weight: 700;
+  font-size: 74px;
+  letter-spacing: .2px;
+  line-height: 84px;
+}
+
+.pricing-list li div > div > span {
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: .1px;
+  font-weight: 700;
+  color: #252B42;
+}
+
+.pricing-list li div > div > p {
+  color: #374754;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: .1px;
+}
+
+.pricing-list .pricing-feature {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pricing-list .order-now {
+  background-color: #2091F9;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 255px;
+  height: 56px;
+  border-radius: 35px;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.pricing-list li:nth-of-type(2) {
+  background-color: #2091F9;
+  height: 600px;
+  padding: 73px 40px;
+}
+
+.pricing-list li:nth-of-type(2) span {
+  color: #fff;
+}
+
+.pricing-list li:nth-of-type(2) p {
+  color: #fff;
+}
+
+.pricing-list li:nth-of-type(2) .order-now {
+  background-color: #fff;
+  color: #2091F9;
+}
+
+@media (max-width: 1160px) {
+  .pricing-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 786px) {
+  .pricing h2 {
+    font-size: 40px;
+  }
+
+  .pricing > p {
+    font-size: 20px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  .pricing h2 {
+    font-size: 36px;
+  }
+
+  .pricing > p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
