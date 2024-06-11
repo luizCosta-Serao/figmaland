@@ -11,10 +11,10 @@
     <button class="menu-mobile"><img title="Menu" src="<?php echo INCLUDE_PATH; ?>/assets/menu.svg" alt="Menu"></button>
     <nav class="menu">
       <ul>
-        <li><a title="Home" href="/">Home</a></li>
-        <li><a title="Product" href="#product">Product</a></li>
-        <li><a title="Pricing" href="#pricing">Pricing</a></li>
-        <li><a title="About" href="#about">About</a></li>
+        <li><a title="Home" href="<?php echo INCLUDE_PATH; ?>/">Home</a></li>
+        <li><a title="Product" href="<?php echo INCLUDE_PATH; ?>/#product">Product</a></li>
+        <li><a title="Pricing" href="<?php echo INCLUDE_PATH; ?>/#pricing">Pricing</a></li>
+        <li><a title="About" href="<?php echo INCLUDE_PATH; ?>/#about">About</a></li>
         <li><a title="Contact" href="<?php echo INCLUDE_PATH; ?>/contact">Contact</a></li>
       </ul>
       <div class="logo">
