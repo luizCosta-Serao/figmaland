@@ -30,3 +30,6 @@
 
 /* Style Footer */
 @import url('./footer.css');
+
+/* Style not-found */
+@import url('./not-found.css');
