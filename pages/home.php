@@ -1,3 +1,19 @@
+<?php
+  // Scroll Suave
+  switch (@$_GET['url']) {
+    case 'product':
+      echo '<target target="product" />';
+      break;
+    case 'pricing':
+      echo '<target target="pricing" />';
+      break;
+    case 'about':
+      echo '<target target="about" />';
+      break;
+  }
+
+?>
+
 <div class="bg-home"></div>
 <section class="hero-home">
   <h1>The best products start with Figma</h1>
@@ -5,7 +21,7 @@
   <a href="/">Try For Free</a>
 </section>
 
-<section class="features">
+<section id="product" class="features">
   <h2 class="features-title">Features</h2>
   <p class="features-description">Most calendars are designed for teams. Slate is designed for freelancers</p>
   <ul class="features-list">
@@ -27,7 +43,7 @@
   </ul>
 </section>
 
-<section class="fastest-organize">
+<section id="about" class="fastest-organize">
   <div class="fastest-organize-content">
     <h2>Fastest way to organize</h2>
     <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
@@ -78,7 +94,7 @@
   <button class="more-testimonials">More Testimonials</button>
 </section>
 
-<section class="pricing">
+<section id="pricing" class="pricing">
   <h2>Pricing</h2>
   <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
   <ul class="pricing-list">
