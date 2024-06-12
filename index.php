@@ -6,6 +6,12 @@
   $url = isset($_GET['url']) ? $_GET['url'] : 'home';
   if (file_exists('pages/'.$url.'.php')) {
     include('pages/'.$url.'.php');
+  } else if (
+    $_GET['url'] === 'product' ||
+    $_GET['url'] === 'pricing' ||
+    $_GET['url'] === 'about'
+  ) {
+    include('pages/home.php');
   } else {
     include('pages/not-found.php');
   }
