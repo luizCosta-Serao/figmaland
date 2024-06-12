@@ -1,0 +1,57 @@
+.login-painel {
+  max-width: 600px;
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 20px;
+}
+
+.login-painel form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-painel form input[type='text'],
+.login-painel form input[type='password'] {
+  height: 40px;
+  padding-left: 8px;
+  color: #222;
+  font-size: 20px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  outline: none;
+  transition: .3s;
+}
+
+.login-painel form input[type='text']::placeholder,
+.login-painel form input[type='password']::placeholder {
+  color: #222;
+  font-size: 20px;
+}
+
+.login-painel form input[type='text']:focus,
+.login-painel form input[type='password']:focus,
+.login-painel form input[type='text']:hover,
+.login-painel form input[type='password']:hover {
+  border: 1px solid #222;
+}
+
+.login-painel form input[type='submit'] {
+  background-color: #2091F9;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  height: 35px;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
