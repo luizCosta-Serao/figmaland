@@ -1,8 +1,8 @@
 .login-painel {
   max-width: 600px;
   width: 100%;
-  padding: 1rem;
-  background-color: #fff;
+  padding: 2rem 1rem;
+  background-color: #eee;
   position: relative;
   top: 50%;
   left: 50%;
@@ -13,7 +13,7 @@
 .login-painel h1 {
   color: #222;
   text-align: center;
-  margin-bottom: 1remw;
+  margin-bottom: 1rem;
 }
 
 .login-painel form {
@@ -59,6 +59,7 @@
   border-radius: 10px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
   align-items: center;
 }
 

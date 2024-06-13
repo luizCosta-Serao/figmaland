@@ -3,3 +3,6 @@
 
 /* Style Page Login Painel */
 @import url('./login.css');
+
+/* Style Page Painel de Controle */
+@import url('./main.css');
