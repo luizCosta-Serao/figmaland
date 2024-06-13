@@ -14,14 +14,41 @@
 </head>
 <body>
   <header class="header">
+    <div class="menu-btn">
+      <button><img src="<?php echo INCLUDE_PATH; ?>/assets/painel/menu.svg" alt="Menu"></button>
+    </div>
     <div>
       <a href="<?php echo INCLUDE_PATH_PAINEL; ?>/?loggout">Sair</a>
     </div>
     </header>
     
-  <aside class="header-left">
+  <aside>
 
+    <div class="box-usuario">
+      <?php
+        // verificar img no banco de dados
+        if ($_SESSION['img'] === '') {
+          // Se img estiver vazio, inserir img padrão
+      ?>
+        <div class="img-usuario">
+          <img src="<?php echo INCLUDE_PATH; ?>/assets/painel/person.svg" alt="Avatar">
+        </div>
+      <?php
+        // Se img estiver preenchida adicionar a mesma 
+        } else { 
+      ?>
+        <div class="img-usuario">
+          <img src="<?php echo INCLUDE_PATH_PAINEL; ?>/uploads/<?php echo $_SESSION['img'] ?>" alt="">
+        </div>
+      <?php } ?>
+    
+      <div class="nome-usuario">
+        <p><?php echo $_SESSION['nome'] ?></p>
+        <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
+      </div>
+    </div>
   </aside>
+
   <section class="container">
 
   </section>

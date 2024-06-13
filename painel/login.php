@@ -11,17 +11,30 @@
     <?php
       // Login
       if(isset($_POST['action'])) {
+        // puxar user e password do form inseridos
         $user = $_POST['user'];
         $password = $_POST['password'];
+        // Conectar ao banco de dados e verificar se existe o usuário inserido no form
         $sql = MySql::conectar()->prepare("SELECT * FROM `usuarios_admin` WHERE user = ? AND password = ?");
         $sql->execute(array($user, $password));
+        // Verificar se usuário existir
         if ($sql->rowCount() == 1) {
+          // Usuário existe
+          // obter as informações do usuario
+          $info = $sql->fetch();
+
+          // Salvar na session os dados do usuario obtidos do banco de dados
           $_SESSION['login'] = true;
           $_SESSION['user'] = $user;
           $_SESSION['password'] = $password;
+          $_SESSION['cargo'] = $info['cargo'];
+          $_SESSION['nome'] = $info['nome'];
+          $_SESSION['img'] = $info['img'];
+          // Redirecionar para o painel
           header('Location: '.INCLUDE_PATH_PAINEL);
           die();
         } else {
+          // Usuário não existe
           echo '<div class="erro-box">Usuário ou Senha incorretos</div>';
         }
       }
