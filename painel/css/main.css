@@ -1,0 +1,22 @@
+.header {
+  background-color: #222;
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.header a {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+aside {
+  position: fixed;
+  width: 30%;
+  height: 100vh;
+  background-color: #222;
+}
+
+.container {
+  padding-left: calc(30% + 10px);
+}
