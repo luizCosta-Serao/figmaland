@@ -1,1 +1,1 @@
-estou logado
+<h1>Bem-Vindo <?php echo $_SESSION['user'] ?> ;D</h1>
