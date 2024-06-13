@@ -21,4 +21,16 @@
   define('PASSWORD', '');
   define('DATABASE', 'figmaland');
 
+  // Funções
+
+  // Função para obter o cargo de permissao no painel de controle
+  function pegaCargo($cargo) {
+    $arr = [
+      '0' => 'Normal',
+      '1' => 'Sub Administrador',
+      '2' => 'Administrador'
+    ];
+    return $arr[$cargo];
+  }
+
 ?>
