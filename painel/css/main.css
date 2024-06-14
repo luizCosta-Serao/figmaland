@@ -1,13 +1,19 @@
 .header {
   background-color: #424242;
-  padding: 1rem 1rem 1rem calc(17% + 10px);
+  padding: 1rem;
   display: flex;
   width: 100%;
   top: 0;
   align-items: center;
   position: fixed;
   z-index: 1;
+  transition: .3s ease-in-out;
   justify-content: space-between;
+}
+
+/* Style menu active */
+.header.active {
+  padding: 1rem 1rem 1rem calc(17% + 10px);
 }
 
 .header .menu-btn button {
@@ -31,11 +37,20 @@
 
 aside {
   position: fixed;
-  padding: 2rem .5rem;
-  width: 17%;
+  padding: 2rem 0;
+  width: 0%;
+  transform: translateX(-50px);
   height: 100vh;
   background-color: #424242;
   z-index: 2;
+  transition: .3s ease-in-out;
+}
+
+/* Style menu active */
+aside.active {
+  width: 17%;
+  padding: 2rem .5rem;
+  transform: translateX(0px);
 }
 
 aside .box-usuario {
@@ -66,5 +81,13 @@ aside .box-usuario .nome-usuario p {
 }
 
 .container {
+  padding-top: 100px;
+  padding-left: 1rem;
+  transition: .3s ease-in-out;
+}
+
+/* Style menu active */
+.container.active {
   padding-left: calc(17% + 10px);
+
 }
