@@ -39,7 +39,8 @@ aside {
   position: fixed;
   padding: 2rem 0;
   width: 0%;
-  transform: translateX(-50px);
+  overflow-y: auto;
+  transform: translateX(-100px);
   height: 100vh;
   background-color: #424242;
   z-index: 2;
@@ -49,11 +50,12 @@ aside {
 /* Style menu active */
 aside.active {
   width: 17%;
-  padding: 2rem .5rem;
+  padding: 2rem 0;
   transform: translateX(0px);
 }
 
 aside .box-usuario {
+  padding: 0 .5rem 2rem .5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,11 +75,51 @@ aside .box-usuario .img-usuario img {
   width: 60%;
 }
 
+aside .box-usuario .photo-usuario {
+  width: 100px;
+  height: 100px;
+  border: 4px solid #424242;
+  box-shadow: 0 0 0 2px #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside .box-usuario .photo-usuario img {
+  width: 110px;
+  object-fit: cover;
+  height: 95px;
+  border-radius: 50%;
+}
+
 aside .box-usuario .nome-usuario p {
   color: #fefefe;
   text-align: center;
   font-size: 18px;
   margin-top: 10px;
+}
+
+aside .menu-aside ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  }
+  
+aside .menu-aside ul .category-menu {
+  background-color: #212121;
+  padding: 1rem .5rem;
+  color: #fff;
+}
+
+aside .menu-aside ul li {
+  padding: 1rem .5rem;
+  border-bottom: 2px solid #212121;
+}
+
+aside .menu-aside ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .container {
@@ -90,4 +132,52 @@ aside .box-usuario .nome-usuario p {
 .container.active {
   padding-left: calc(17% + 10px);
 
+}
+
+.container > h1 {
+  color: #222;
+  font-size: 30px;
+  padding: 1rem;
+}
+
+.container .metrics {
+  display: flex;
+  gap: 16px;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  align-items: center;
+}
+
+.container .metrics .metrics-single {
+  padding: 2rem;
+  flex: 1;
+}
+
+.container .metrics .metrics-single h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.container .metrics .metrics-single p {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.container .metrics .users-online {
+  background-color: #004d40;
+}
+
+.container .metrics .visits-total {
+  background-color: #1b5e20;
+}
+
+.container .metrics .visits-today {
+  background-color: #dd2c00;
 }
