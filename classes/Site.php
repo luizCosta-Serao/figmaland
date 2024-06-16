@@ -44,6 +44,20 @@
         $sql->execute(array($ip, $horarioAtual, $token));
       }
     }
+
+    // Obter número de visitas no site
+    public static function contador() {
+      // Se usuário não tiver entrado ainda na página
+      if(!isset($_COOKIE['visita'])) {
+        // Setar cookie para o usuário, para não adicionar mais uma visita do mesmo usuário
+        setcookie('visita', 'true', time() + (60 * 60 * 24 * 7));
+        // Inserindo no banco de dados o usuário visitante
+        $sql = MySql::conectar()->prepare("INSERT INTO `visits` VALUES (null,?,?)");
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $date = date('Y-m-d');
+        $sql->execute(array($ip, $date));
+      }
+    }
   }
 
 ?>

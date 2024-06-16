@@ -2,6 +2,16 @@
   // guardando numa variável os usuários online
   $usuariosOnline = Painel::listarUsuariosOnline();
   
+  // Obtendo total de visitas no site e guardando numa variável
+  $pegarVisitasTotais = MySql::conectar()->prepare("SELECT * FROM `visits`");
+  $pegarVisitasTotais->execute();
+  $pegarVisitasTotais = $pegarVisitasTotais->rowCount();
+
+  // Obtendo total de visitas hoje e guardando numa variável;
+  $pegarVisitasHoje = MySql::conectar()->prepare("SELECT * FROM `visits` WHERE dia = ?");
+  $hoje = date('Y-m-d');
+  $pegarVisitasHoje->execute(array($hoje));
+  $pegarVisitasHoje = $pegarVisitasHoje->rowCount();
 ?>
 <h1>Painel de Controle</h1>
       <ul class="metrics">  
@@ -11,11 +21,11 @@
         </li>
         <li class="metrics-single visits-total">
           <h1>Total de Visitas</h1>
-          <p>100</p>
+          <p><?php echo $pegarVisitasTotais; ?></p>
         </li>
         <li class="metrics-single visits-today">
           <h1>Visitas Hoje</h1>
-          <p>3</p>
+          <p><?php echo $pegarVisitasHoje; ?></p>
         </li>
       </ul>
 
