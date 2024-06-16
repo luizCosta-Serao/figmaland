@@ -2,6 +2,9 @@
 <?php
   // Função para atualizar ou adicionar usuário online na página
   Site::updateUsuariosOnline();
+
+  // Função para obter número de visitas no site
+  Site::contador();
 ?>
 <?php include('header.php'); ?>
 
