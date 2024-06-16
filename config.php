@@ -3,6 +3,9 @@
   // Sempre que for trabalhar com session, deve-se chamar o session_start()
   session_start();
 
+  // Definir horário de São Paulo
+  date_default_timezone_set('America/Sao_Paulo');
+
   // Carregar classes dinamicamente, sem a necessidade de instanciar com new Class
   $autoload = function($class) {
     include('classes/'.$class.'.php');

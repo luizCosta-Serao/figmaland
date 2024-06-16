@@ -1,4 +1,8 @@
 <?php include('config.php'); ?>
+<?php
+  // Função para atualizar ou adicionar usuário online na página
+  Site::updateUsuariosOnline();
+?>
 <?php include('header.php'); ?>
 
 <?php
