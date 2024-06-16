@@ -181,3 +181,23 @@ aside .menu-aside ul li a {
 .container .metrics .visits-today {
   background-color: #dd2c00;
 }
+
+.usuarios-online {
+  padding: 2rem;
+  max-width: 350px;
+}
+
+.usuarios-online h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.usuarios-online .usuarios-online-table,
+  .usuarios-online .usuarios-online-table th,
+.usuarios-online .usuarios-online-table td {
+  border-collapse:collapse;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid rgb(160 160 160);
+}
