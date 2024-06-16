@@ -18,6 +18,9 @@
   //constante do caminho absoluto do painel de controle
   define('INCLUDE_PATH_PAINEL', INCLUDE_PATH.'/painel');
 
+  // constante do caminho do painel de controle para funçoes de imagem
+  define('BASE_DIR_PAINEL', __DIR__.'/painel');
+
   // Conectar com banco de dados
   define('HOST', 'localhost');
   define('USER', 'root');

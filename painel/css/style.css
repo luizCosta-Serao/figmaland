@@ -6,3 +6,6 @@
 
 /* Style Page Painel de Controle */
 @import url('./main.css');
+
+/* Style Editar Usuário */
+@import url('./form.css');
