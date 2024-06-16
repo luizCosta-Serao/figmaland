@@ -62,7 +62,7 @@
         <li><a href="">Listar Testimonials</a></li>
         <li><a href="">Listar Pricings</a></li>
         <li class="category-menu">Administração do Painel</li>
-        <li><a href="">Editar Usuário</a></li>
+        <li><a href="<?php echo INCLUDE_PATH_PAINEL; ?>/editar-usuario">Editar Usuário</a></li>
         <li><a href="">Adicionar Usuários</a></li>
         <li class="category-menu">Configuração Geral</li>
         <li><a href="">Editar</a></li>

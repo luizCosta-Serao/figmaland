@@ -1,0 +1,66 @@
+.box-content {
+  background-color: #eee;
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px 40px;
+}
+
+.box-content > h2 {
+  color: #222;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.box-content form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-content form div label {
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.box-content form div input {
+  color: #222;
+  padding-left: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  height: 40px;
+  transition: .3s;
+  outline: none;
+}
+
+.box-content form div input:hover,
+.box-content form div input:focus {
+  border: 1px solid #666;
+}
+
+.box-content form div input[type="submit"] {
+  background-color: #377fff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  height: auto;
+  padding: 10px 20px;
+  cursor: pointer;
+  max-width: 150px;
+}
+
+.sucesso {
+  background-color: #00ff00;
+  margin-bottom: 20px;
+  padding: 10px 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.erro {
+  background-color: #ff0000;
+  margin-bottom: 20px;
+  padding: 10px 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
