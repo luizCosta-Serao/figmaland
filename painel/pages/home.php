@@ -54,3 +54,33 @@
     </tbody>
   </table>
 </div>
+
+<div class="usuarios-online">
+  <h2>Usuários do Painel</h2>
+  <table class="usuarios-online-table">
+    <thead>
+      <th>Nome</th>
+      <th>Cargo</th>
+    </thead>
+    <tbody>
+      <?php
+        // Obtendo usuários do painel de controle no banco de dados
+        $usuariosPainel = MySql::conectar()->prepare("SELECT * FROM `usuarios_admin`");
+        $usuariosPainel->execute();
+        $usuariosPainel = $usuariosPainel->fetchAll();
+        // Listando Usuário do painel de controle
+        foreach ($usuariosPainel as $key => $value) {
+      ?>
+        <tr>
+          <td><?php echo $value['user']; ?></td>
+          <td>
+            <?php
+              // Cargo do usuário
+              echo Painel::$cargos[$value['cargo']]; 
+            ?>
+          </td>
+        </tr>
+      <?php } ?>
+    </tbody>
+  </table>
+</div>
