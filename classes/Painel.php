@@ -105,6 +105,35 @@
       // deletar antiga imagem na pasta uploads
       @unlink('uploads/'.$file);
     }
+
+    // Função dinâmica para cadastro
+    public static function insert($arr) {
+      $certo = true;
+      // obtendo o nome da tabela através do $_POST de um input:hidden
+      $nome_tabela = $arr['nome_tabela'];
+      // query para inserção dos dados no banco de dados
+      $query = "INSERT INTO `$nome_tabela` VALUES (null";
+        foreach ($arr as $key => $value) {
+          $nome = $key;
+          $valor = $value;
+          if ($nome === 'action' || $nome === 'nome_tabela') {
+            continue;
+          }
+          if ($value === '') {
+            $certo = false;
+            break;
+          }
+          $query.=",?";
+          $parametros[] = $value;
+        }
+      $query.=")";
+      //Fim da query para inserção dos dados no banco de dados
+      if ($certo === true) {
+        $sql = MySql::conectar()->prepare($query);
+        $sql->execute($parametros);
+      }
+      return $certo;
+    }
   }
 
 ?>
