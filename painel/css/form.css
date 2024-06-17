@@ -21,7 +21,8 @@
   margin-bottom: 5px;
 }
 
-.box-content form div input {
+.box-content form div input,
+.box-content form div select {
   color: #222;
   padding-left: 8px;
   margin-bottom: 20px;

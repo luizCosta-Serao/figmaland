@@ -30,13 +30,8 @@
   // Funções
 
   // Função para obter o cargo de permissao no painel de controle
-  function pegaCargo($cargo) {
-    $arr = [
-      '0' => 'Normal',
-      '1' => 'Sub Administrador',
-      '2' => 'Administrador'
-    ];
-    return $arr[$cargo];
+  function pegaCargo($indice) {
+    return Painel::$cargos[$indice];
   }
 
   // Função para mudar estilo da âncora ativa

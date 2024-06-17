@@ -1,5 +1,12 @@
 <?php
   class Painel {
+     // Variável de cargos do painel de controle
+    public static $cargos = [
+      '0' => 'Normal',
+      '1' => 'Sub Administrador',
+      '2' => 'Administrador'
+    ];
+
     // Verifica se está logado
     public static function logado() {
       return isset($_SESSION['login']) ? true : false;
@@ -77,10 +84,13 @@
 
     // realizar upload da nova imagem e salvar na pasta uploads
     public static function uploadFile($file) {
+      // criando nome único para cada imagem
+      $formatoArquivo = explode('.', $file['name']);
+      $imagemNome = uniqid().'.'.$formatoArquivo[count($formatoArquivo) - 1];
       // função nativa php para upload de arquivos com primeiro parâmetro sendo o nome do arquivo e o segundo parâmetro onde vai ser salvo o arquivo
-      if(move_uploaded_file($file['tmp_name'], BASE_DIR_PAINEL.'/uploads/'.$file['name'])) {
+      if(move_uploaded_file($file['tmp_name'], BASE_DIR_PAINEL.'/uploads/'.$imagemNome)) {
         // Se upload der certo, retorne o nome do arquivo
-        return $file['name'];
+        return $imagemNome;
       } else {
         // Se ocorrer problema no upload da imagem, retornar falso
         return false;
