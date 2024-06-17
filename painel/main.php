@@ -52,20 +52,20 @@
     <nav class="menu-aside">
       <ul>
         <li class="category-menu">Início</li>
-        <li><a href="<?php echo INCLUDE_PATH_PAINEL; ?>">Home</a></li>
+        <li><a <?php selecionadoMenu(''); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>">Home</a></li>
         <li class="category-menu">Cadastro</li>
-        <li><a href="<?php echo INCLUDE_PATH_PAINEL; ?>/cadastrar-feature">Cadastrar Feature</a></li>
-        <li><a href="<?php echo INCLUDE_PATH_PAINEL; ?>/cadastrar-testimonial">Cadastrar Testimonial</a></li>
-        <li><a href="">Cadastrar Pricing</a></li>
+        <li><a <?php selecionadoMenu('cadastrar-feature'); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>/cadastrar-feature">Cadastrar Feature</a></li>
+        <li><a <?php selecionadoMenu('cadastrar-testimonial'); ?>  href="<?php echo INCLUDE_PATH_PAINEL; ?>/cadastrar-testimonial">Cadastrar Testimonial</a></li>
+        <li><a <?php selecionadoMenu('cadastrar-pricing'); ?> href="">Cadastrar Pricing</a></li>
         <li class="category-menu">Gestão</li>
-        <li><a href="">Listar Features</a></li>
-        <li><a href="">Listar Testimonials</a></li>
-        <li><a href="">Listar Pricings</a></li>
+        <li><a <?php selecionadoMenu('listar-features'); ?> href="">Listar Features</a></li>
+        <li><a <?php selecionadoMenu('listar-testimonials'); ?> href="">Listar Testimonials</a></li>
+        <li><a <?php selecionadoMenu('listar-pricing'); ?> href="">Listar Pricings</a></li>
         <li class="category-menu">Administração do Painel</li>
-        <li><a href="<?php echo INCLUDE_PATH_PAINEL; ?>/editar-usuario">Editar Usuário</a></li>
-        <li><a href="">Adicionar Usuários</a></li>
+        <li><a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>/editar-usuario">Editar Usuário</a></li>
+        <li><a <?php selecionadoMenu('adicionar-usuario'); ?> <?php verificaPermissao(2); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>/adicionar-usuario">Adicionar Usuário</a></li>
         <li class="category-menu">Configuração Geral</li>
-        <li><a href="">Editar</a></li>
+        <li><a <?php selecionadoMenu('editar'); ?> href="">Editar</a></li>
       </ul>
     </nav>
   </aside>

@@ -122,6 +122,10 @@ aside .menu-aside ul li a {
   color: #fff;
 }
 
+aside .menu-aside ul li a.menu-active::before {
+  content: '>>  ';
+}
+
 .container {
   padding-top: 100px;
   padding-left: 1rem;
