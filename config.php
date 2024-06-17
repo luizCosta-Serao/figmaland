@@ -39,4 +39,34 @@
     return $arr[$cargo];
   }
 
+  // Função para mudar estilo da âncora ativa
+  function selecionadoMenu($par) {
+    // Obter a URL atual com REQUEST_URI e selecionar o último parâmetro da URL
+    $url = explode('/',filter_var($_SERVER['REQUEST_URI']))[3];
+    // Verificar se a variável url é igual ao parâmetro par da função
+    if ($url === $par) {
+      // Se for igual adicionar a classe menu-active
+      echo 'class="menu-active"';
+    }
+  }
+
+  // função para verificar permissao do usuário do painel de controle
+  function verificaPermissao($permissao) {
+    // Se permissao for menor que o necessário
+    if ($_SESSION['cargo'] < $permissao) {
+      // item/âncora do menu não irá aparecer
+      echo 'style="display:none"';
+    }
+  }
+
+  // função para verificar permissao do usuário do painel de controle para acessar páginas através da inserção de valores na URL
+  function verificaPermissaoPagina($permissao) {
+    // Se permissão for menor que o necessário
+    if ($_SESSION['cargo'] < $permissao) {
+      // Será redirecionado para a página principal do painel de controle
+      header('Location: '.INCLUDE_PATH_PAINEL);
+      die();
+    }
+  }
+
 ?>
