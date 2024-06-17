@@ -134,6 +134,14 @@
       }
       return $certo;
     }
+
+    // Puxar todos os dados de uma tabela do banco de dados
+    public static function selectAll($tabela) {
+      $sql = MySql::conectar()->prepare("SELECT * FROM `$tabela`");
+      $sql->execute();
+      // retorna os dados
+      return $sql->fetchAll();
+    }
   }
 
 ?>

@@ -7,5 +7,8 @@
 /* Style Page Painel de Controle */
 @import url('./main.css');
 
-/* Style Editar Usuário */
+/* Style Formulários */
 @import url('./form.css');
+
+/* Style Listar Dados */
+@import url('./listar.css');
