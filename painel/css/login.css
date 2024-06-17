@@ -70,3 +70,15 @@
   text-align: center;
   margin-bottom: .5rem;
 }
+
+.form-group-login {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group-login input[type="checkbox"] {
+  position: relative;
+  top: 2px;
+}

@@ -14,6 +14,9 @@
 
     // Deslogar do Painel de Controle
     public static function loggout() {
+      // Se fizer loggout, destruir o cookie lembrar
+      setcookie('lembrar', 'true', time() - 1, '/');
+      // destruir sessions
       session_destroy();
       header('Location: '.INCLUDE_PATH_PAINEL);
     }

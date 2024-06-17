@@ -1,3 +1,32 @@
+<?php
+  // Se cookie lembrar existir
+  if (isset($_COOKIE['lembrar'])) {
+    // Obter os valores dos cookies user e password
+    $user = $_COOKIE['user'];
+    $password = $_COOKIE['password'];
+
+    // Verificar se usuário existe no banco de dados
+    $sql = MySql::conectar()->prepare("SELECT * FROM `usuarios_admin` WHERE user = ? AND password = ?");
+    $sql->execute(array($user, $password));
+    // Se usuário existir
+    if ($sql->rowCount() === 1) {
+      // Puxar dados do usuário no banco de dados
+      $info = $sql->fetch();
+
+      // guardar os valores do usuário na session
+      $_SESSION['login'] = true;
+      $_SESSION['user'] = $user;
+      $_SESSION['password'] = $password;
+      $_SESSION['cargo'] = $info['cargo'];
+      $_SESSION['nome'] = $info['nome'];
+      $_SESSION['img'] = $info['img'];
+
+      // Redirecionar para o painel de controle
+      header('Location: '.INCLUDE_PATH_PAINEL);
+      die();
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +59,14 @@
           $_SESSION['cargo'] = $info['cargo'];
           $_SESSION['nome'] = $info['nome'];
           $_SESSION['img'] = $info['img'];
+
+          // Se estiver selecionado o checkout lembrar
+          if (isset($_POST['lembrar'])) {
+            // Setar cookies para lembrar login
+            setcookie('lembrar', true, time() + (60 * 60 * 24), '/');
+            setcookie('user', $user, time() + (60 * 60 * 24), '/');
+            setcookie('password', $password, time() + (60 * 60 * 24), '/');
+          }
           // Redirecionar para o painel
           header('Location: '.INCLUDE_PATH_PAINEL);
           die();
@@ -43,6 +80,10 @@
     <form method="post">
       <input type="text" name="user" placeholder="Login" required>
       <input type="password" name="password" placeholder="Password" required>
+      <div class="form-group-login">
+        <label for="lembrar">Lembrar-me</label>
+        <input type="checkbox" name="lembrar" id="lembrar">
+      </div>
       <input type="submit" name="action" value="Login">
     </form>
   </section>
