@@ -58,7 +58,7 @@
         <li><a <?php selecionadoMenu('cadastrar-testimonial'); ?>  href="<?php echo INCLUDE_PATH_PAINEL; ?>/cadastrar-testimonial">Cadastrar Testimonial</a></li>
         <li><a <?php selecionadoMenu('cadastrar-pricing'); ?> href="">Cadastrar Pricing</a></li>
         <li class="category-menu">Gestão</li>
-        <li><a <?php selecionadoMenu('listar-features'); ?> href="">Listar Features</a></li>
+        <li><a <?php selecionadoMenu('listar-features'); ?> href="<?php echo INCLUDE_PATH_PAINEL; ?>/listar-features">Listar Features</a></li>
         <li><a <?php selecionadoMenu('listar-testimonials'); ?> href="">Listar Testimonials</a></li>
         <li><a <?php selecionadoMenu('listar-pricing'); ?> href="">Listar Pricings</a></li>
         <li class="category-menu">Administração do Painel</li>
