@@ -35,3 +35,25 @@
   background-color: #ff0000;
   color: #fff;
 }
+
+.paginacao {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.paginacao a {
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+}
+
+.paginacao a.page-selected {
+  background-color: #377fff;
+  color: #fff;
+}
