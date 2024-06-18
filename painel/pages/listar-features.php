@@ -2,8 +2,11 @@
   // Para acessar essa página é necessário permissao de valor 2
   verificaPermissaoPagina(0);
 
-  // Puxando dados da tabela site_features
-  $features = Painel::selectAll('site_features');
+  // Paginação
+  $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+  $porPagina = 2;
+  // Puxando dados da tabela site_features com sistema de paginação
+  $features = Painel::selectAll('site_features', ($paginaAtual - 1) * $porPagina, $porPagina);
 ?>
 <div class="box-content">
   <h2>Features Cadastrados</h2>
@@ -27,4 +30,18 @@
       </tr>
     <?php } ?>
   </table>
+
+  <div class="paginacao">
+    <?php
+      // Paginação
+      $totalPaginas = ceil(count(Painel::selectAll('site_features')) / $porPagina);
+      for ($i=1; $i <= $totalPaginas; $i++) { 
+        if ($i === $paginaAtual) {
+          echo '<a class="page-selected" href="'.INCLUDE_PATH_PAINEL.'/listar-features?pagina='.$i.'">'.$i.'</a>';
+        } else {
+          echo '<a href="'.INCLUDE_PATH_PAINEL.'/listar-features?pagina='.$i.'">'.$i.'</a>';
+        }
+      }
+    ?>
+  </div>
 </div>
