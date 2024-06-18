@@ -146,6 +146,26 @@
       // retorna os dados
       return $sql->fetchAll();
     }
+
+    // Método para deletar dados de uma tabela do banco de dados
+    public static function deletar($tabela, $id = false) {
+      if ($id === false) {
+        // Se id não for passado, deletar tudo
+        $sql = MySql::conectar()->prepare("DELETE FROM `$tabela`");
+      } else {
+        // Se id for passado, deletar apenas o dado indicado
+        $sql = MySql::conectar()->prepare("DELETE FROM `$tabela` WHERE id = $id");
+        $sql->execute();
+      }
+    }
+
+    // Função para redirecionar
+    public static function redirect($url) {
+      echo '<script>
+        location.href = '.$url.'
+      </script>';
+      die();
+    }
   }
 
 ?>
