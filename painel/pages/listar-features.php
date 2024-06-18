@@ -2,6 +2,14 @@
   // Para acessar essa página é necessário permissao de valor 2
   verificaPermissaoPagina(0);
 
+  // Excluir item da lista de features
+  if (isset($_GET['excluir'])) {
+    // obtendo id da feature
+    $idExcluir = intval($_GET['excluir']);
+    // Método para deletar a feature
+    Painel::deletar('site_features', $idExcluir);
+  }
+
   // Paginação
   $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
   $porPagina = 2;
@@ -26,7 +34,7 @@
         <td><?php echo $value['title']; ?></td>
         <td><?php echo $value['description'] ?></td>
         <td><a class="btn-edit" href="">Editar</a></td>
-        <td><a class="btn-delete" href="">Excluir</a></td>
+        <td><a class="btn-delete" href="<?php echo INCLUDE_PATH_PAINEL; ?>/listar-features?excluir=<?php echo $value['id']; ?>">Excluir</a></td>
       </tr>
     <?php } ?>
   </table>
