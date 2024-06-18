@@ -135,6 +135,41 @@
       return $certo;
     }
 
+      // Função dinâmica para atualizar dados
+      public static function update($arr) {
+        $certo = true;
+        $first = false;
+        // obtendo o nome da tabela através do $_POST de um input:hidden
+        $nome_tabela = $arr['nome_tabela'];
+        // query para atualizar dados no banco de dados
+        $query = "UPDATE `$nome_tabela` SET ";
+          foreach ($arr as $key => $value) {
+            $nome = $key;
+            $valor = $value;
+            if ($nome === 'action' || $nome === 'nome_tabela' || $nome === 'id') {
+              continue;
+            }
+            if ($value === '') {
+              $certo = false;
+              break;
+            }
+            if ($first === false) {
+              $first = true;
+              $query.="$nome = ?";
+            } else {
+              $query.=", $nome = ?";
+            }
+            $parametros[] = $value;
+          }
+        //Fim da query para atualização dos dados no banco de dados
+        if ($certo === true) {
+          $parametros[] = $arr['id'];
+          $sql = MySql::conectar()->prepare($query.' WHERE id = ?');
+          $sql->execute($parametros);
+        }
+        return $certo;
+      }
+
     // Puxar todos os dados de uma tabela do banco de dados
     public static function selectAll($tabela, $start = null, $end = null) {
       if ($start === null && $end === null) {
@@ -165,6 +200,13 @@
         location.href = '.$url.'
       </script>';
       die();
+    }
+
+    // função para puxar um único dado de uma tabela do banco de dados
+    public static function select($table, $query, $arr) {
+      $sql = MySql::conectar()->prepare("SELECT * FROM `$table` WHERE $query");
+      $sql->execute($arr);
+      return $sql->fetch();
     }
   }
 
