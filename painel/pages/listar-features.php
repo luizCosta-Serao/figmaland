@@ -33,7 +33,7 @@
       <tr>
         <td><?php echo $value['title']; ?></td>
         <td><?php echo $value['description'] ?></td>
-        <td><a class="btn-edit" href="">Editar</a></td>
+        <td><a class="btn-edit" href="<?php echo INCLUDE_PATH_PAINEL; ?>/editar-feature?id=<?php echo $value['id']; ?>">Editar</a></td>
         <td><a class="btn-delete" href="<?php echo INCLUDE_PATH_PAINEL; ?>/listar-features?excluir=<?php echo $value['id']; ?>">Excluir</a></td>
       </tr>
     <?php } ?>
