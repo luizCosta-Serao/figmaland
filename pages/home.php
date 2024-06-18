@@ -25,21 +25,19 @@
   <h2 class="features-title">Features</h2>
   <p class="features-description">Most calendars are designed for teams. Slate is designed for freelancers</p>
   <ul class="features-list">
-    <li>
-      <img src="<?php echo INCLUDE_PATH; ?>/assets/mdi_drawing.svg" alt="">
-      <h3>OpenType features Variables fonts</h3>
-      <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
-    </li>
-    <li>
-      <img src="<?php echo INCLUDE_PATH; ?>/assets/mdi_draw.svg" alt="">
-      <h3>Design with real data</h3>
-      <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
-    </li>
-    <li>
-      <img src="<?php echo INCLUDE_PATH; ?>/assets/mdi_brush.svg" alt="">
-      <h3>Fastest way to take action</h3>
-      <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
-    </li>
+    <?php
+      // Inserir valores do banco de dados no site
+      $sql = MySql::conectar()->prepare("SELECT * FROM `site_features`");
+      $sql->execute();
+      $features = $sql->fetchAll();
+      foreach ($features as $key => $value) {
+    ?>
+      <li>
+        <img src="<?php echo INCLUDE_PATH; ?>/assets/mdi_drawing.svg" alt="">
+        <h3><?php echo $value['title']; ?></h3>
+        <p><?php echo $value['description']; ?></p>
+      </li>
+    <?php } ?>
   </ul>
 </section>
 
